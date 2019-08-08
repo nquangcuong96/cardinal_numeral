@@ -20,7 +20,7 @@ class MyTest(unittest.TestCase):
                'one hundred billion, sixty-eight million, four hundred and fifty-eight thousand and nine hundred and four'
                ]
         for i in range(len(number)):
-            self.assertEqual(cardinal_numeral.integer_to_english_numeral(number[i]), ans[i])
+            self.assertEqual(cardinal_numeral.integer_to_english_numeral(activate_tts=False, n=number[i]), ans[i])
 
     def test_cardinal_numerals_vie_north(self):
         number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 21, 101, 105, 1001, 1031, 96, 405, 1915, 5061, 1002003,
@@ -34,7 +34,7 @@ class MyTest(unittest.TestCase):
                'một tỷ không trăm linh hai triệu không trăm linh bốn', 'một trăm triệu không trăm linh bốn',
                'chín trăm chín mươi chín tỷ chín trăm chín mươi chín triệu chín trăm chín mươi chín nghìn chín trăm chín mươi chín']
         for i in range(len(number)):
-            self.assertEqual(cardinal_numeral.integer_to_vietnamese_numeral(number[i], 'north', False), ans[i])
+            self.assertEqual(cardinal_numeral.integer_to_vietnamese_numeral(region='north', n=number[i], activate_tts=False), ans[i])
 
     def test_cardinal_numerals_vie_south(self):
         number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 21, 101, 105, 1001, 1031, 96, 405, 1915, 5061, 1002003,
@@ -48,5 +48,5 @@ class MyTest(unittest.TestCase):
                'một tỷ không trăm lẻ hai triệu không trăm lẻ bốn', 'một trăm triệu không trăm lẻ bốn',
                'chín trăm chín mươi chín tỷ chín trăm chín mươi chín triệu chín trăm chín mươi chín ngàn chín trăm chín mươi chín']
         for i in range(len(number)):
-            self.assertEqual(cardinal_numeral.integer_to_vietnamese_numeral(number[i], 'south', False), ans[i])
+            self.assertEqual(cardinal_numeral.integer_to_vietnamese_numeral(n=number[i],activate_tts=False, region='south' ), ans[i])
 

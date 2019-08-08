@@ -20,3 +20,7 @@ computer will spell the number after cover it to string
 1. Create a GUI for project
 2. Create unittest for project
 3. Update last version for guide
+## Ver 5.1
+1. Fix bugs
+2. Change name of arguments
+3. Change some exceptions
